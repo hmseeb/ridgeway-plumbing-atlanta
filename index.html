@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ridgeway Plumbing Atlanta — Licensed, state-certified plumbers serving Atlanta since 1985. Water heater repair, sewer lines, trenchless repair, gas lines & more. Call (470) 305-7006." />
+  <meta name="keywords" content="plumber Atlanta, plumbing Atlanta, water heater repair Atlanta, sewer line Atlanta, emergency plumber Atlanta, Ridgeway Plumbing" />
+  <meta property="og:title" content="Ridgeway Plumbing Atlanta | Licensed Plumbers Since 1985" />
+  <meta property="og:description" content="Over 85,000 waterline replacements. Licensed, state-certified plumbers. Unconditional warranty. Call (470) 305-7006 — available 7 days a week." />
+  <meta property="og:type" content="website" />
+  <title>Ridgeway Plumbing Atlanta | Licensed Plumbers Since 1985</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a1628'/><text y='22' x='5' font-size='20' fill='%23f97316'>🔧</text></svg>" />
+  <style>
+    /* ========================
+       CSS RESET & BASE
+    ======================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f8f9fb;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ========================
+       CSS VARIABLES
+    ======================== */
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #0f2044;
+      --navy-light: #1a3060;
+      --orange: #f97316;
+      --orange-dark: #ea6c0a;
+      --orange-light: #ffedd5;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --shadow: 0 4px 24px rgba(10,22,40,0.10);
+      --shadow-lg: 0 12px 48px rgba(10,22,40,0.18);
+      --transition: 0.22s ease;
+    }
+
+    /* ========================
+       UTILITIES
+    ======================== */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-label {
+      display: inline-block;
+      background: var(--orange-light);
+      color: var(--orange-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-title span { color: var(--orange); }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      max-width: 560px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: 0 4px 18px rgba(249,115,22,0.35);
+    }
+    .btn-primary:hover { background: var(--orange-dark); box-shadow: 0 6px 24px rgba(249,115,22,0.45); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.55);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+
+    /* ========================
+       STICKY HEADER
+    ======================== */
+    #header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--navy);
+      box-shadow: 0 2px 16px rgba(10,22,40,0.28);
+      transition: background var(--transition);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--orange);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .logo-text {
+      line-height: 1.2;
+    }
+    .logo-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+      white-space: nowrap;
+    }
+    .logo-sub {
+      font-size: 0.7rem;
+      color: var(--gray-400);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    nav a {
+      color: var(--gray-400);
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+    nav a:hover { color: var(--white); }
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      transition: background var(--transition), transform var(--transition);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .header-phone:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .header-phone svg { width: 17px; height: 17px; }
+
+    /* Mobile nav toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      background: var(--navy-mid);
+      border-top: 1px solid var(--navy-light);
+      padding: 16px 20px 20px;
+    }
+    .mobile-nav.open { display: block; }
+    .mobile-nav a {
+      display: block;
+      color: var(--gray-400);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: color var(--transition);
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--white); }
+    .mobile-nav .mobile-cta {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 13px;
+      border-radius: var(--radius);
+    }
+
+    /* ========================
+       HERO
+    ======================== */
+    #hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0d1e3a 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 80px;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 110% 50%, rgba(249,115,22,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 80% at -10% 60%, rgba(249,115,22,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    /* Background pipe pattern */
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -80px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      border: 60px solid rgba(255,255,255,0.025);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249,115,22,0.15);
+      border: 1px solid rgba(249,115,22,0.35);
+      color: var(--orange);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 22px;
+    }
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+    .hero-title .accent { color: var(--orange); }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 34px;
+      max-width: 480px;
+      line-height: 1.65;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 44px;
+    }
+    .hero-phone-btn {
+      font-size: 1.1rem;
+      padding: 16px 32px;
+    }
+    .hero-phone-btn svg { width: 20px; height: 20px; }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-stat-num {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+      margin-top: 3px;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+      align-self: stretch;
+    }
+
+    /* Hero visual panel */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-card-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .hero-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .hero-check-icon {
+      width: 22px;
+      height: 22px;
+      background: rgba(249,115,22,0.2);
+      border: 1.5px solid var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--orange);
+      font-size: 0.7rem;
+    }
+    .hero-emergency-card {
+      background: var(--orange);
+      border-radius: var(--radius-lg);
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .emergency-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+    .emergency-text strong {
+      display: block;
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+    .emergency-text span {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.88rem;
+    }
+
+    /* ========================
+       TRUST BADGES BAR
+    ======================== */
+    #trust {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 28px 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border-radius: var(--radius);
+      border: 1.5px solid var(--gray-200);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .trust-item:hover {
+      border-color: var(--orange);
+      box-shadow: 0 4px 16px rgba(249,115,22,0.12);
+    }
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--orange-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .trust-info strong {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .trust-info span {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+
+    /* ========================
+       SERVICES
+    ======================== */
+    #services {
+      padding: 90px 0;
+      background: var(--gray-50);
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .services-header .section-subtitle {
+      margin: 0 auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      border: 1.5px solid var(--gray-200);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      cursor: default;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--orange);
+    }
+    .service-card:hover .service-icon {
+      background: var(--orange);
+    }
+    .service-card:hover .service-icon svg,
+    .service-card:hover .service-icon span {
+      color: var(--white);
+    }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--orange-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      transition: background var(--transition);
+    }
+    .service-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--gray-600);
+      line-height: 1.55;
+    }
+    .service-emergency {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-emergency::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      border: 30px solid rgba(249,115,22,0.12);
+    }
+    .service-emergency .service-icon {
+      background: rgba(249,115,22,0.2);
+    }
+    .service-emergency .service-name {
+      color: var(--white);
+      font-size: 1.15rem;
+    }
+    .service-emergency .service-desc {
+      color: rgba(255,255,255,0.7);
+    }
+    .service-emergency .service-cta {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background var(--transition);
+    }
+    .service-emergency .service-cta:hover { background: var(--orange-dark); }
+    .service-emergency:hover {
+      transform: translateY(-5px);
+      border-color: transparent;
+    }
+
+    /* ========================
+       ABOUT
+    ======================== */
+    #about {
+      padding: 90px 0;
+      background: var(--white);
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-main-card {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: var(--radius-lg);
+      padding: 44px 40px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-main-card::before {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: -40px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      border: 40px solid rgba(249,115,22,0.1);
+    }
+    .about-main-card::after {
+      content: '';
+      position: absolute;
+      top: -20px; left: -60px;
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      border: 30px solid rgba(255,255,255,0.04);
+    }
+    .about-card-year {
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(249,115,22,0.25);
+      line-height: 1;
+      margin-bottom: -10px;
+    }
+    .about-card-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .about-card-body {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.65;
+    }
+    .about-float-badge {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      background: var(--orange);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-float-badge strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .about-float-badge span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    .about-content .section-subtitle {
+      margin-bottom: 28px;
+    }
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+    .about-feature {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .about-feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--orange-light);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .about-feature-text strong {
+      display: block;
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+    .about-feature-text span {
+      font-size: 0.87rem;
+      color: var(--gray-600);
+    }
+
+    /* ========================
+       TESTIMONIALS
+    ======================== */
+    #testimonials {
+      padding: 90px 0;
+      background: var(--gray-50);
+    }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .testimonials-header .section-subtitle {
+      margin: 0 auto;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      border: 1.5px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+    .star { color: #fbbf24; font-size: 1.05rem; }
+    .testimonial-text {
+      font-size: 0.97rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 46px;
+      height: 46px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+    .author-info strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+    }
+    .verified-badge {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      color: #16a34a;
+      font-weight: 600;
+    }
+
+    /* ========================
+       CTA BANNER
+    ======================== */
+    #cta-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #0a1a38 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      border: 70px solid rgba(249,115,22,0.07);
+    }
+    #cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 50px solid rgba(249,115,22,0.05);
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .cta-inner .section-label {
+      background: rgba(249,115,22,0.2);
+      color: var(--orange);
+    }
+    .cta-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .cta-title span { color: var(--orange); }
+    .cta-desc {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .cta-phone-btn {
+      font-size: 1.15rem;
+      padding: 18px 36px;
+    }
+    .cta-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+    }
+    .cta-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+    }
+    .cta-meta-item span:first-child { color: var(--orange); font-size: 1rem; }
+
+    /* ========================
+       FOOTER
+    ======================== */
+    #footer {
+      background: #060f1e;
+      padding: 60px 0 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.4fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo {
+      margin-bottom: 16px;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      margin-bottom: 18px;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .footer-contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .footer-contact-item span:first-child {
+      font-size: 1rem;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    .footer-contact-item a,
+    .footer-contact-item p {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+      transition: color var(--transition);
+    }
+    .footer-contact-item a:hover { color: var(--white); }
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin-bottom: 24px;
+    }
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-bottom p span { color: var(--orange); }
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-legal a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+      transition: color var(--transition);
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ========================
+       RESPONSIVE
+    ======================== */
+    @media (max-width: 1100px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .service-emergency {
+        grid-column: span 3;
+      }
+    }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .nav-toggle { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-emergency { grid-column: span 2; }
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 600px) {
+      #hero { padding: 60px 0; }
+      .hero-stats { gap: 16px; }
+      .hero-stat-divider { display: none; }
+      .trust-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .trust-item { padding: 12px 14px; gap: 10px; }
+      .trust-icon { width: 40px; height: 40px; font-size: 1.1rem; }
+      .trust-info strong { font-size: 1rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-emergency { grid-column: span 1; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .header-phone .phone-text { display: none; }
+      .cta-actions { flex-direction: column; align-items: center; }
+    }
+
+    /* ========================
+       SCROLL ANIMATIONS
+    ======================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+  </style>
+</head>
+<body>
+
+  <!-- ========================
+       STICKY HEADER
+  ======================== -->
+  <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#hero" class="logo">
+          <div class="logo-icon">🔧</div>
+          <div class="logo-text">
+            <div class="logo-name">Ridgeway Plumbing</div>
+            <div class="logo-sub">Atlanta, GA</div>
+          </div>
+        </a>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#footer">Contact</a>
+        </nav>
+        <a href="tel:4703057006" class="header-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          <span class="phone-text">(470) 305-7006</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#testimonials" class="mobile-nav-link">Reviews</a>
+      <a href="#footer" class="mobile-nav-link">Contact</a>
+      <a href="tel:4703057006" class="mobile-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        Call Now: (470) 305-7006
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================
+       HERO
+  ======================== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">⚡ Available 7 Days a Week</div>
+          <h1 class="hero-title">
+            Atlanta's Most<br />
+            <span class="accent">Trusted</span> Plumbers<br />
+            Since 1985
+          </h1>
+          <p class="hero-desc">
+            Licensed, state-certified plumbers with over 85,000 waterline replacements completed. No-nonsense service, upfront pricing, and an unconditional warranty on every job.
+          </p>
+          <div class="hero-ctas">
+            <a href="tel:4703057006" class="btn btn-primary hero-phone-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+              </svg>
+              (470) 305-7006
+            </a>
+            <a href="#services" class="btn btn-outline">View All Services</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num">1985</span>
+              <span class="hero-stat-label">Est. Year</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">85K+</span>
+              <span class="hero-stat-label">Jobs Completed</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">10yr</span>
+              <span class="hero-stat-label">Max Warranty</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">7</span>
+              <span class="hero-stat-label">Days a Week</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <div class="hero-card-title">Why Homeowners Choose Us</div>
+            <div class="hero-checklist">
+              <div class="hero-check"><div class="hero-check-icon">✓</div> State-licensed & certified plumbers</div>
+              <div class="hero-check"><div class="hero-check-icon">✓</div> Unconditional 1–10 year warranty</div>
+              <div class="hero-check"><div class="hero-check-icon">✓</div> Upfront, transparent pricing</div>
+              <div class="hero-check"><div class="hero-check-icon">✓</div> Same-day service available</div>
+              <div class="hero-check"><div class="hero-check-icon">✓</div> 85,000+ waterline replacements</div>
+              <div class="hero-check"><div class="hero-check-icon">✓</div> Over 40 years in Atlanta</div>
+            </div>
+          </div>
+          <div class="hero-emergency-card">
+            <div class="emergency-icon">🚨</div>
+            <div class="emergency-text">
+              <strong>24/7 Emergency Plumbing</strong>
+              <span>Burst pipes, floods, gas leaks — we respond fast.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       TRUST BADGES
+  ======================== -->
+  <section id="trust">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item fade-in">
+          <div class="trust-icon">🏆</div>
+          <div class="trust-info">
+            <strong>Est. 1985</strong>
+            <span>40+ Years Serving Atlanta</span>
+          </div>
+        </div>
+        <div class="trust-item fade-in fade-in-delay-1">
+          <div class="trust-icon">💧</div>
+          <div class="trust-info">
+            <strong>85,000+ Jobs</strong>
+            <span>Waterline Replacements & Repairs</span>
+          </div>
+        </div>
+        <div class="trust-item fade-in fade-in-delay-2">
+          <div class="trust-icon">🎖️</div>
+          <div class="trust-info">
+            <strong>Licensed & Certified</strong>
+            <span>State-Certified Plumbers</span>
+          </div>
+        </div>
+        <div class="trust-item fade-in fade-in-delay-3">
+          <div class="trust-icon">🛡️</div>
+          <div class="trust-info">
+            <strong>Warranty Backed</strong>
+            <span>Unconditional 1–10 Year Warranty</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       SERVICES
+  ======================== -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header fade-in">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Full-Service Plumbing,<br /><span>Done Right the First Time</span></h2>
+        <p class="section-subtitle">From routine repairs to major sewer line replacements — our licensed team handles it all across the Atlanta metro area.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">🔥</div>
+          <div class="service-name">Water Heater Repair &amp; Installation</div>
+          <div class="service-desc">Tank and tankless water heater service, replacement, and installation. Fast turnaround so you're never without hot water.</div>
+        </div>
+        <div class="service-card fade-in fade-in-delay-1">
+          <div class="service-icon">💧</div>
+          <div class="service-name">Water Line Replacement &amp; Repair</div>
+          <div class="service-desc">Over 85,000 waterline replacements completed. We diagnose, repair, or fully replace failing water lines with minimal disruption.</div>
+        </div>
+        <div class="service-card fade-in fade-in-delay-2">
+          <div class="service-icon">🔩</div>
+          <div class="service-name">Sewer Lines &amp; Slab Leaks</div>
+          <div class="service-desc">Expert sewer line repair and slab leak detection using advanced equipment. We find the problem fast and fix it right.</div>
+        </div>
+        <div class="service-card fade-in fade-in-delay-3">
+          <div class="service-icon">🚿</div>
+          <div class="service-name">Trenchless Sewer Line Repair</div>
+          <div class="service-desc">No-dig trenchless technology for sewer line repairs and replacements — saves your yard, your driveway, and your wallet.</div>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">🔥</div>
+          <div class="service-name">Gas Line Repairs &amp; Installations</div>
+          <div class="service-desc">Licensed gas line repair, new installations, and system upgrades. Safety is our top priority for every gas job.</div>
+        </div>
+        <div class="service-card fade-in fade-in-delay-1">
+          <div class="service-icon">🚿</div>
+          <div class="service-name">Faucets, Toilets &amp; Fixtures</div>
+          <div class="service-desc">Faucet and toilet repair or replacement, garbage disposal installation, dishwasher hookups, and all fixture work.</div>
+        </div>
+        <div class="service-card fade-in fade-in-delay-2">
+          <div class="service-icon">❄️</div>
+          <div class="service-name">Frozen Pipes &amp; Specialty Work</div>
+          <div class="service-desc">Ejector pump installation, shower pan replacement, frozen pipe thawing and repair — we handle the tough jobs.</div>
+        </div>
+        <div class="service-card service-emergency fade-in fade-in-delay-3">
+          <div class="service-icon">🚨</div>
+          <div class="service-name">24/7 Emergency Plumbing</div>
+          <div class="service-desc">Plumbing emergencies don't wait for business hours. We're available around the clock, 7 days a week for urgent situations across Atlanta.</div>
+          <a href="tel:4703057006" class="service-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+            </svg>
+            Call Now: (470) 305-7006
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       ABOUT
+  ======================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-main-card">
+            <div class="about-card-year">1985</div>
+            <div class="about-card-title">Four Decades of Excellence</div>
+            <div class="about-card-body">
+              Since opening our doors in 1985, Ridgeway Plumbing Atlanta has been the trusted choice for homeowners and businesses across the Atlanta metro area. Our reputation is built on honest work, reliable service, and standing behind every job we do.
+            </div>
+          </div>
+          <div class="about-float-badge">
+            <strong>85K+</strong>
+            <span>Jobs Done</span>
+          </div>
+        </div>
+        <div class="about-content fade-in">
+          <div class="section-label">About Us</div>
+          <h2 class="section-title">Atlanta's Plumbing<br /><span>Experts for 40+ Years</span></h2>
+          <p class="section-subtitle">
+            Ridgeway Plumbing Atlanta is a locally-owned company staffed entirely by state-licensed, certified plumbers. We've completed over 85,000 waterline replacements and built a track record Atlanta homeowners trust.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">📋</div>
+              <div class="about-feature-text">
+                <strong>State-Licensed & Certified</strong>
+                <span>Every plumber on our team holds a current state certification — no unlicensed technicians, ever.</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🛡️</div>
+              <div class="about-feature-text">
+                <strong>Unconditional Warranty</strong>
+                <span>We back our work with a 1 to 10 year unconditional warranty. If it fails, we fix it — no questions asked.</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">📍</div>
+              <div class="about-feature-text">
+                <strong>Locally Rooted in Atlanta</strong>
+                <span>We live here, work here, and take pride in protecting Atlanta's homes. This is our community too.</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">📅</div>
+              <div class="about-feature-text">
+                <strong>7-Day Availability</strong>
+                <span>Open Mon–Fri 7am–6pm, Sat 7am–5pm, Sun 9am–5pm. Emergency response available around the clock.</span>
+              </div>
+            </div>
+          </div>
+          <a href="tel:4703057006" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+            </svg>
+            Get a Free Estimate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       TESTIMONIALS
+  ======================== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials-header fade-in">
+        <div class="section-label">Customer Reviews</div>
+        <h2 class="section-title">What Atlanta<br /><span>Homeowners Say</span></h2>
+        <p class="section-subtitle">Real feedback from real customers across Atlanta who trusted Ridgeway Plumbing to get the job done right.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "Had a major slab leak under my kitchen — complete nightmare. Ridgeway came out same day, walked me through exactly what needed to happen, and had it fixed by the next afternoon. No upselling, no drama. These guys are the real deal. Will never call anyone else."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MH</div>
+            <div class="author-info">
+              <strong>Marcus H.</strong>
+              <span>Sandy Springs, GA</span>
+            </div>
+            <div class="verified-badge">
+              <span>✅</span> Verified
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in fade-in-delay-1">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "I called at 11pm on a Sunday because a pipe burst in my basement. Ridgeway answered immediately and had someone at my house within the hour. Honest, professional, and the price was completely fair. That warranty they offer is also no joke — it's the real thing."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TL</div>
+            <div class="author-info">
+              <strong>Tanya L.</strong>
+              <span>Buckhead, Atlanta</span>
+            </div>
+            <div class="verified-badge">
+              <span>✅</span> Verified
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in fade-in-delay-2">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "Ridgeway replaced our entire water line using trenchless technology — barely touched the yard. The crew was clean, professional, and finished faster than expected. After using them, I can't imagine trusting my home to any other plumbing company in Atlanta."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">DW</div>
+            <div class="author-info">
+              <strong>Derek W.</strong>
+              <span>Dunwoody, GA</span>
+            </div>
+            <div class="verified-badge">
+              <span>✅</span> Verified
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       CTA BANNER
+  ======================== -->
+  <section id="cta-banner">
+    <div class="container">
+      <div class="cta-inner fade-in">
+        <div class="section-label">Get Started Today</div>
+        <h2 class="cta-title">Need a Plumber?<br />Call <span>(470) 305-7006</span></h2>
+        <p class="cta-desc">Same-day service available. We serve all of Atlanta and surrounding areas 7 days a week — including holidays.</p>
+        <div class="cta-actions">
+          <a href="tel:4703057006" class="btn btn-primary cta-phone-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+            </svg>
+            (470) 305-7006
+          </a>
+          <a href="#services" class="btn btn-outline">Browse Services</a>
+        </div>
+        <div class="cta-meta">
+          <div class="cta-meta-item"><span>📍</span> Serving All of Metro Atlanta</div>
+          <div class="cta-meta-item"><span>🕐</span> Open 7 Days a Week</div>
+          <div class="cta-meta-item"><span>🛡️</span> Warranty on Every Job</div>
+          <div class="cta-meta-item"><span>⚡</span> 24/7 Emergency Response</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       FOOTER
+  ======================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <div class="logo-icon">🔧</div>
+            <div class="logo-text">
+              <div class="logo-name">Ridgeway Plumbing</div>
+              <div class="logo-sub">Atlanta, GA · Est. 1985</div>
+            </div>
+          </a>
+          <p>Atlanta's trusted plumbing company since 1985. Licensed, certified, and backed by an unconditional warranty. We take care of your home like it's our own.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Services</div>
+          <div class="footer-links">
+            <a href="#services">Water Heater Repair</a>
+            <a href="#services">Water Line Replacement</a>
+            <a href="#services">Sewer Line Repair</a>
+            <a href="#services">Trenchless Repair</a>
+            <a href="#services">Gas Line Services</a>
+            <a href="#services">Emergency Plumbing</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#trust">Why Ridgeway</a>
+            <a href="#cta-banner">Get a Quote</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact Us</div>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <span>📞</span>
+              <a href="tel:4703057006">(470) 305-7006</a>
+            </div>
+            <div class="footer-contact-item">
+              <span>📍</span>
+              <p>5271 Lake Forrest Dr<br />Atlanta, GA 30342</p>
+            </div>
+            <div class="footer-contact-item">
+              <span>🕐</span>
+              <p>Mon–Fri: 7am–6pm<br />Sat: 7am–5pm<br />Sun: 9am–5pm<br /><strong style="color:rgba(249,115,22,0.9)">24/7 Emergency Line</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ridgeway Plumbing Atlanta. All rights reserved. | <span>Licensed &amp; State-Certified</span></p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================
+       JAVASCRIPT
+  ======================== -->
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav when a link is clicked
+    document.querySelectorAll('.mobile-nav-link, .mobile-cta').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll fade-in animation
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Header shadow on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.style.boxShadow = '0 4px 24px rgba(10,22,40,0.40)';
+      } else {
+        header.style.boxShadow = '0 2px 16px rgba(10,22,40,0.28)';
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
